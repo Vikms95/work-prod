@@ -23,9 +23,7 @@ export function createRootUrl() {
 
   // TODO aquí nos deberían dar la url válida para usarla en local y no ir
   // cambiándola ya que en localhost no tenemos manera de resolverla de forma dinámica
-  if (l.port == '9000') {
-    return l.hash == '#debug' ? 'https://localhost:7071' : 'http://h22api.for2home.com'
-  }
+  return 'http://h22api.for2home.com'
 
   const split = l.hostname.split('.')
 
