@@ -41,5 +41,5 @@ export function getProxyUrl(url: string) {
     rootUrl = createRootUrl()
   }
 
-  return `${rootUrl}/${url}`
+  return `http://h22api.for2home.com/${url}`
 }
