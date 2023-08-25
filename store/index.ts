@@ -1,5 +1,5 @@
 import { createProjectActions } from './projectActions'
-import { createViewer2DActions } from './viewer2DActions'
+import { createViewer2DActions } from './viewer2dActions'
 import { createLinesActions } from './lineActions'
 import { createItemActions } from './itemActions'
 
@@ -81,7 +81,7 @@ export const appStoreBase = create<Store & Actions>()(
         texture1: {},
         texture2: {},
         texture3: {},
-      } satisfies Store),
+      }) satisfies Store,
   ),
 )
 
