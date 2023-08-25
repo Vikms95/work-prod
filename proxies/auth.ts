@@ -24,6 +24,7 @@ class AutenticateProxy {
   }
 
   newSession() {
+    console.log('FILTER', this.url)
     setRemeberSession()
     //
     return (

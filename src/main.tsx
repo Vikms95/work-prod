@@ -16,7 +16,10 @@ import LogoutModal from '@components/GenericModals/LogoutModal'
 import ErrorModal from '@components/GenericModals/ErrorModal'
 import HolesModal from '@components/GenericModals/HolesModal'
 import { Spinner } from '@components/Loaders/spinner'
+import { getProxyUrl } from '@proxies/index'
 export { Outlet }
+
+console.log('URL IS', getProxyUrl('/lastringquesea'))
 
 const router = createBrowserRouter([
   {

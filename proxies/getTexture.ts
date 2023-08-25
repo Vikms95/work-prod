@@ -16,6 +16,8 @@ export async function getTexture(catalog: string, idTextura: number) {
     },
   }
 
+  console.log('FILTER', url)
+
   try {
     const data = await fetch(url + catalog + '/' + idTextura, params as RequestInit)
     if (data.ok) {
