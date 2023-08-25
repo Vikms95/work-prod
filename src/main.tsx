@@ -1,8 +1,6 @@
 // init
 import { EditProject, Home, Login, Planner, Register, RoomBuilder } from '@components'
-import { MainLogin } from '@components/Login/MainLogin'
 import { ModalConfirm } from '@components/ModalConfirm'
-import { MainRegister } from '@components/Register/MainRegister'
 import { UserContextProvider } from '@context/user'
 import { SaveConfirm } from '@components/ModalConfirm/SaveConfirm'
 import { SaveWrong } from '@components/ModalConfirm/SaveWrong'
