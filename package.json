@@ -1,0 +1,150 @@
+{
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "safeBuild": "tsc && vite build",
+    "preview": "vite preview --port:9000",
+    "format": "npx prettier --write .",
+    "update:swagger": "npx swagger-typescript-api -p ./swagger.json -o ./utils/queryBuilder/ -n myApi.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-form": "^0.0.3",
+    "@radix-ui/react-portal": "^1.0.3",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-select": "^1.2.2",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@radix-ui/react-toggle-group": "^1.0.4",
+    "@react-spring/three": "^9.7.3",
+    "@react-three/csg": "^3.0.0",
+    "@react-three/drei": "^9.80.3",
+    "@react-three/fiber": "^8.13.7",
+    "@react-three/gpu-pathtracer": "^0.1.1",
+    "@types/uuid": "^9.0.2",
+    "camera-controls": "^2.7.0",
+    "clsx": "^2.0.0",
+    "eslint": "^8.47.0",
+    "framer-motion": "^10.16.0",
+    "immer": "^10.0.2",
+    "jest": "^29.6.2",
+    "leva": "^0.9.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.15.0",
+    "simple-zustand-devtools": "^1.1.0",
+    "superjson": "^1.13.1",
+    "three": "^0.155.0",
+    "uuid": "^9.0.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
+    "@testing-library/dom": "^9.3.1",
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/node": "^20.5.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-svg-pan-zoom": "^3.3.5",
+    "@types/three": "^0.155.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "autoprefixer": "^10.4.15",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.28",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-tsconfig-paths": "^4.2.0"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "always",
+    "singleAttributePerLine": true,
+    "printWidth": 100,
+    "useEditorConfig": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:react/jsx-runtime"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react"
+    ],
+    "rules": {
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "react/no-unknown-property": [
+        true,
+        [
+          "position",
+          "visible",
+          "rotation",
+          "onPointerMissed",
+          "args"
+        ]
+      ],
+      "camelcase": "error",
+      "semi": [
+        "error",
+        "never"
+      ],
+      "no-restricted-imports": [
+        "error",
+        {
+          "paths": [
+            {
+              "name": "@utils/queryBuilder/myApi",
+              "message": "Please use API from @utils/queryBuilder"
+            }
+          ]
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+}

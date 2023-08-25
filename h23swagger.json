@@ -1,0 +1,2446 @@
+{
+  "x-generator": "NSwag v13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "host": "h23api.for2home.com",
+  "schemes": ["http"],
+  "paths": {
+    "/api/Acabados/getunidadacabadosinfo/{idUnidad}": {
+      "get": {
+        "tags": ["Acabados"],
+        "operationId": "Acabados_GetUnidadAcabadosInfo",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idUnidad",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetUnidadAcabadosInfoOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Acabados/getunidadacabadoszonasinfo/{idUnidad}/{idAcabadoUnidad}": {
+      "get": {
+        "tags": ["Acabados"],
+        "operationId": "Acabados_GetUnidadAcabadosZonasInfo",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idUnidad",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "idAcabadoUnidad",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfAcabadoZonaInfoDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "AcabadoZonaInfoDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/AcabadoZonaInfoDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Acabados/gettexturas/{idModeloAcabado}": {
+      "get": {
+        "tags": ["Acabados"],
+        "operationId": "Acabados_GetTexturas",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idModeloAcabado",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfTexturasDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "TexturasDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/TexturasDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Acabados/getelementosenlazadosunidadacabados/{idUnidad}": {
+      "get": {
+        "tags": ["Acabados"],
+        "operationId": "Acabados_GetElementosEnlazadosUnidadAcabados",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idUnidad",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfFEElementosEnlazadosUnidadAcabadosDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "FEElementosEnlazadosUnidadAcabadosDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/FEElementosEnlazadosUnidadAcabadosDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/u/activate-account/{token}": {
+      "get": {
+        "tags": ["ActivateAccount"],
+        "operationId": "ActivateAccount_Index",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/newSession": {
+      "get": {
+        "tags": ["Auth"],
+        "operationId": "Auth_NewSession",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AuthOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/authenticate": {
+      "post": {
+        "tags": ["Auth"],
+        "operationId": "Auth_Authenticate",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "info",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AuthOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/isAuthenticated": {
+      "get": {
+        "tags": ["Auth"],
+        "operationId": "Auth_IsAuthenticated",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/getUserAuthenticated": {
+      "get": {
+        "tags": ["Auth"],
+        "operationId": "Auth_GetUserAutenticated",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UserAutenticatedOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "operationId": "Auth_Register",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegisterUserInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MessageOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/getUserAct": {
+      "get": {
+        "tags": ["Auth"],
+        "operationId": "Auth_GetUserAct",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ModificarUsuarioDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/modifyUserAct": {
+      "post": {
+        "tags": ["Auth"],
+        "operationId": "Auth_ModifyUserAct",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ModificarUsuarioDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ModificarUsuarioOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/guardar": {
+      "post": {
+        "tags": ["Diseno"],
+        "summary": "Guardar el diseño, la primera vez idDisenos y idVersiones no se tienen que definir sino NombreProyecto,..... En las otras llamadas solo poner idDisenos y idVersiones que se ha retornado en la primera llamada",
+        "description": "Guarda diseño",
+        "operationId": "Diseno_Guardar",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FEProyectDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GuardarDisenoOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/getcamposordenacion": {
+      "get": {
+        "tags": ["Diseno"],
+        "operationId": "Diseno_GetCamposOrdenacion",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfIdDescripcionDTO`1",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "IdDescripcionDTO`1"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/IdDescripcionDTOOfEOrdenacionDisenyos"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/getdisenyos": {
+      "post": {
+        "tags": ["Diseno"],
+        "summary": "Guardar el diseño, la primera vez idDisenos y idVersiones no se tienen que definir sino NombreProyecto,..... En las otras llamadas solo poner idDisenos y idVersiones que se ha retornado en la primera llamada",
+        "description": "Guarda diseño",
+        "operationId": "Diseno_GetDisenyos",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetDisenyosInput"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfGetDisenyoOutput",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "GetDisenyoOutput"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/GetDisenyoOutput"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/abrirdisenyo/{idVersiones}": {
+      "get": {
+        "tags": ["Diseno"],
+        "operationId": "Diseno_AbrirDisenyo",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idVersiones",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AbrirDisenyoOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/borrarversion/{idVersiones}": {
+      "delete": {
+        "tags": ["Diseno"],
+        "operationId": "Diseno_BorrarDisenyo",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idVersiones",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/duplicardisenyo": {
+      "post": {
+        "tags": ["Diseno"],
+        "operationId": "Diseno_DuplicarDisenyo",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DuplicarDisenyoInput"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GuardarDisenoOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Diseno/guardardetalledisenyo": {
+      "post": {
+        "tags": ["Diseno"],
+        "operationId": "Diseno_GuardarDetalleDisenyo",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "parameters": [
+          {
+            "name": "detalle",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FEDetalleDisenosCabDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/I18N/getIdiomas": {
+      "get": {
+        "tags": ["I18N"],
+        "operationId": "I18N_GetIdiomas",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfIdiomaDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "IdiomaDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/IdiomaDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/I18N/loadIdioma": {
+      "get": {
+        "tags": ["I18N"],
+        "operationId": "I18N_LoadIdioma",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "nombreCultura",
+            "in": "query",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoadIdiomaOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/getmenu": {
+      "post": {
+        "tags": ["Menu"],
+        "operationId": "Menu_GetMenu",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetMenuInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MenusDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/busquedaMenu": {
+      "post": {
+        "tags": ["Menu"],
+        "operationId": "Menu_BusquedaMenu",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FiltroMenu"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MenusDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Prefs/updatePreference": {
+      "post": {
+        "tags": ["Prefs"],
+        "operationId": "Prefs_UpdatePreference",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdatePreferenceInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MessageOutput"
+            }
+          }
+        }
+      }
+    },
+    "/api/Texturas/getgrupostexturas": {
+      "post": {
+        "tags": ["Texturas"],
+        "operationId": "Texturas_GetGruposTexturas",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetGrupoTexturasInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfGrupoTexturasDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "GrupoTexturasDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/GrupoTexturasDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Texturas/gettexturas": {
+      "post": {
+        "tags": ["Texturas"],
+        "operationId": "Texturas_GetTexturas",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetTexturasInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "xml": {
+                "name": "ArrayOfTexturasDTO",
+                "wrapped": true
+              },
+              "items": {
+                "xml": {
+                  "name": "TexturasDTO"
+                },
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/TexturasDTO"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Texturas/gettextura/{catalog}/{identificadorTextura}": {
+      "get": {
+        "tags": ["Texturas"],
+        "operationId": "Texturas_GetTextura",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "catalog",
+            "in": "path",
+            "required": true,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "IdentificadorTextura",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TexturasDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Unidades/getunidad/{idunidades}": {
+      "get": {
+        "tags": ["Unidades"],
+        "operationId": "Unidades_GetUnidadGET",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idUnidades",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/FEUnidadDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Unidades/getunidad": {
+      "post": {
+        "tags": ["Unidades"],
+        "operationId": "Unidades_GetUnidadPOST",
+        "consumes": ["application/json", "text/json", "application/*+json"],
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetFEUnidadInput"
+            },
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "Accept-Language",
+            "x-originalName": "lang",
+            "in": "header",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/FEUnidadDTO"
+            }
+          }
+        }
+      }
+    },
+    "/api/Unidades/getinfopuertaventa/{idUnidades}": {
+      "get": {
+        "tags": ["Unidades"],
+        "operationId": "Unidades_GetInfoPuertaVentana",
+        "produces": ["text/plain", "application/json", "text/json"],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "idUnidades",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetFEInfoPuertaVentanaOutput"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetUnidadAcabadosInfoOutput": {
+      "type": "object",
+      "properties": {
+        "acabadosZonas": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "AcabadoZonaInfoDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/AcabadoZonaInfoDTO"
+              }
+            ]
+          }
+        },
+        "opciones": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "TipoUnidadInfoDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/TipoUnidadInfoDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "AcabadoZonaInfoDTO": {
+      "type": "object",
+      "properties": {
+        "idModeloAcabado": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "acabado": {
+          "type": "string"
+        }
+      }
+    },
+    "TipoUnidadInfoDTO": {
+      "type": "object",
+      "properties": {
+        "idTipoUnidad": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "descripcion": {
+          "type": "string"
+        }
+      }
+    },
+    "TexturasDTO": {
+      "type": "object",
+      "properties": {
+        "idTexturas": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "identificadorTextura": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "nombreFichero": {
+          "type": "string"
+        },
+        "ruta": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "urlMiniatura": {
+          "type": "string"
+        },
+        "factorRepeticionX": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "factorRepeticionY": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "opacidad": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "reflejo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "rugosidad": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "color": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "metal": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "brillo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "espejo": {
+          "type": "boolean"
+        },
+        "miniatura": {
+          "type": "string"
+        },
+        "rugosidadFichero": {
+          "type": "string"
+        },
+        "factorDeEscala": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "descatalogado": {
+          "type": "boolean"
+        },
+        "idDependencias": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "grupo": {
+          "$ref": "#/definitions/GrupoTexturasDTO"
+        }
+      }
+    },
+    "GrupoTexturasDTO": {
+      "type": "object",
+      "properties": {
+        "idGruposDeTexturas": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ruta": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "subGrupos": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "GrupoTexturasDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/GrupoTexturasDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "FEElementosEnlazadosUnidadAcabadosDTO": {
+      "type": "object",
+      "properties": {
+        "tipoUnidad": {
+          "$ref": "#/definitions/TipoUnidadInfoDTO"
+        },
+        "elementos": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEElementoEnlazadoUnidadAcabadosDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEElementoEnlazadoUnidadAcabadosDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "FEElementoEnlazadoUnidadAcabadosDTO": {
+      "type": "object",
+      "properties": {
+        "idElementosEnlazados": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "idUnidadEnlazada": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "codigo": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "referenciaJpgpng": {
+          "type": "string"
+        }
+      }
+    },
+    "AuthOutput": {
+      "type": "object",
+      "required": ["cleanRembemberToken"],
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "rememberToken": {
+          "type": "string"
+        },
+        "cleanRembemberToken": {
+          "type": "boolean"
+        },
+        "sessionId": {
+          "type": "string"
+        },
+        "prefsInfo": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "PrefInfo"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/PrefInfo"
+              }
+            ]
+          }
+        },
+        "prefs": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "idioma": {
+          "$ref": "#/definitions/IdiomaDTO"
+        },
+        "textos": {
+          "$ref": "#/definitions/JsonObject"
+        }
+      }
+    },
+    "PrefInfo": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "typeValor": {
+          "type": "string"
+        }
+      }
+    },
+    "IdiomaDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "codigo": {
+          "type": "string"
+        },
+        "nombreCultura": {
+          "type": "string"
+        },
+        "idioma": {
+          "type": "string"
+        }
+      }
+    },
+    "JsonObject": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/JsonNode"
+        },
+        {
+          "type": "object",
+          "required": ["Count"],
+          "properties": {
+            "Count": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      ]
+    },
+    "JsonNode": {
+      "type": "object",
+      "x-abstract": true,
+      "required": ["root"],
+      "properties": {
+        "options": {
+          "$ref": "#/definitions/JsonNodeOptions"
+        },
+        "parent": {
+          "$ref": "#/definitions/JsonNode"
+        },
+        "root": {
+          "$ref": "#/definitions/JsonNode"
+        }
+      }
+    },
+    "JsonNodeOptions": {
+      "type": "object",
+      "required": ["propertyNameCaseInsensitive"],
+      "properties": {
+        "propertyNameCaseInsensitive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "AuthInput": {
+      "type": "object",
+      "properties": {
+        "correo": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "public": {
+          "type": "boolean"
+        },
+        "remember": {
+          "type": "boolean"
+        },
+        "cleanRembemberToken": {
+          "type": "boolean"
+        }
+      }
+    },
+    "UserAutenticatedOutput": {
+      "type": "object",
+      "properties": {
+        "isPublic": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        }
+      }
+    },
+    "MessageOutput": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "RegisterUserInput": {
+      "type": "object",
+      "required": ["confirmarTerminos"],
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "cPostal": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "idIdioma": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "empresa": {
+          "type": "string"
+        },
+        "cif": {
+          "type": "string"
+        },
+        "ciudad": {
+          "type": "string"
+        },
+        "pais": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "correoConfirmar": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirmar": {
+          "type": "string"
+        },
+        "confirmarTerminos": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ModificarUsuarioDTO": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "codigoPostal": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "idIdioma": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "empresa": {
+          "type": "string"
+        },
+        "cif": {
+          "type": "string"
+        },
+        "ciudad": {
+          "type": "string"
+        },
+        "pais": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "passwordActual": {
+          "type": "string"
+        },
+        "passwordNuevo": {
+          "type": "string"
+        },
+        "passwordConfirmar": {
+          "type": "string"
+        }
+      }
+    },
+    "ModificarUsuarioOutput": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/MessageOutput"
+        },
+        {
+          "type": "object",
+          "required": ["cleanRembemberToken"],
+          "properties": {
+            "token": {
+              "type": "string"
+            },
+            "rememberToken": {
+              "type": "string"
+            },
+            "cleanRembemberToken": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "GuardarDisenoOutput": {
+      "type": "object",
+      "properties": {
+        "idDisenos": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "idVersiones": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "FEProyectDTO": {
+      "type": "object",
+      "properties": {
+        "disenyo": {
+          "$ref": "#/definitions/FEDisenosDTO"
+        },
+        "escena": {
+          "$ref": "#/definitions/FEEscenaDTO"
+        },
+        "fecha": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "FEDisenosDTO": {
+      "type": "object",
+      "properties": {
+        "idDisenos": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "idVersiones": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nombreProyecto": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "apellidos": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "codPostal": {
+          "type": "string"
+        },
+        "poblacion": {
+          "type": "string"
+        },
+        "pais": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "movil": {
+          "type": "string"
+        }
+      }
+    },
+    "FEEscenaDTO": {
+      "type": "object",
+      "properties": {
+        "json": {
+          "type": "string"
+        },
+        "objetosEscena": {
+          "$ref": "#/definitions/FEObjectsEscenaDTO"
+        },
+        "visualesNombradas": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEVisualNombradaDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEVisualNombradaDTO"
+              }
+            ]
+          }
+        },
+        "precio": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "FEObjectsEscenaDTO": {
+      "type": "object",
+      "properties": {
+        "objetos": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "ObjectEscenaDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/ObjectEscenaDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ObjectEscenaDTO": {
+      "type": "object",
+      "properties": {
+        "idUnidades": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "zonas": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "ZonaObjectEscenaDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/ZonaObjectEscenaDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ZonaObjectEscenaDTO": {
+      "type": "object",
+      "properties": {
+        "zona": {
+          "type": "string"
+        },
+        "idTexturas": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "FEVisualNombradaDTO": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "IdDescripcionDTOOfEOrdenacionDisenyos": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/EOrdenacionDisenyos"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "EOrdenacionDisenyos": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Nombre",
+        "Apellidos",
+        "Email",
+        "Movil",
+        "FechaDeInicio",
+        "FechaUltimaModificacion",
+        "Estado"
+      ],
+      "enum": [0, 1, 2, 3, 4, 5, 6]
+    },
+    "GetDisenyoOutput": {
+      "type": "object",
+      "properties": {
+        "disenyo": {
+          "$ref": "#/definitions/FEDisenosFechasDTO"
+        },
+        "escena": {
+          "$ref": "#/definitions/FEEscenaDTO"
+        }
+      }
+    },
+    "FEDisenosFechasDTO": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/FEDisenosDTO"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "fechaCreacion": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "fechaUltimaModificacion": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "GetDisenyosInput": {
+      "type": "object",
+      "properties": {
+        "filtro": {
+          "$ref": "#/definitions/FiltroDisenyos"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "FiltroDisenyos": {
+      "type": "object",
+      "properties": {
+        "ordenacion": {
+          "$ref": "#/definitions/EOrdenacionDisenyos"
+        },
+        "texto": {
+          "type": "string"
+        }
+      }
+    },
+    "AbrirDisenyoOutput": {
+      "type": "object",
+      "properties": {
+        "json": {
+          "type": "string"
+        },
+        "disenyo": {
+          "$ref": "#/definitions/FEDisenosFechasDTO"
+        },
+        "unidades": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEUnidadDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEUnidadDTO"
+              }
+            ]
+          }
+        },
+        "texturas": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "TexturasDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/TexturasDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "FEUnidadDTO": {
+      "type": "object",
+      "properties": {
+        "idUnidades": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "codigo": {
+          "type": "string"
+        },
+        "referenciaBlender": {
+          "type": "string"
+        },
+        "elemento": {
+          "type": "boolean"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "descripcionLarga": {
+          "type": "string"
+        },
+        "ancho": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fondo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "alto": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "mano": {
+          "$ref": "#/definitions/EMano"
+        },
+        "altura": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "alturaHaciaAbajo": {
+          "type": "boolean"
+        },
+        "colision": {
+          "type": "boolean"
+        },
+        "cota": {
+          "type": "boolean"
+        },
+        "tipoNormalizado": {
+          "type": "string"
+        },
+        "tipoUnidNorm": {
+          "type": "string"
+        },
+        "universal": {
+          "type": "boolean"
+        },
+        "unidadesLuces": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "UnidadesLucesDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/UnidadesLucesDTO"
+              }
+            ]
+          }
+        },
+        "morphs": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "MorphDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/MorphDTO"
+              }
+            ]
+          }
+        },
+        "acabados": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEAcabadoUnidadDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEAcabadoUnidadDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "EMano": {
+      "type": "integer",
+      "description": "",
+      "x-enumFlags": true,
+      "x-enumNames": ["D", "I", "A"],
+      "enum": [1, 2, 3]
+    },
+    "UnidadesLucesDTO": {
+      "type": "object",
+      "properties": {
+        "idUnidadesLuces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tipoLuz": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tipoLuzDescripcion": {
+          "type": "string"
+        },
+        "intensity": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "color": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "distance": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "angle": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "penumbra": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "power": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "castShadow": {
+          "type": "boolean"
+        }
+      }
+    },
+    "MorphDTO": {
+      "type": "object",
+      "properties": {
+        "idMorph": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "tipo": {
+          "type": "string"
+        },
+        "valor": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "valorMin": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "valorMax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "orden": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "FEAcabadoUnidadDTO": {
+      "type": "object",
+      "properties": {
+        "idAcabadoUnidad": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "zona": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "texturas": {
+          "$ref": "#/definitions/FEUnidadTexturasDTO"
+        },
+        "orientacionTextura": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "FEUnidadTexturasDTO": {
+      "type": "object",
+      "properties": {
+        "idTexturas": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "identificadorTextura": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "url": {
+          "type": "string"
+        },
+        "factorRepeticionX": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "factorRepeticionY": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "opacidad": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "reflejo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "rugosidad": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "color": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "metal": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "brillo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "espejo": {
+          "type": "boolean"
+        },
+        "miniatura": {
+          "type": "string"
+        },
+        "rugosidadFichero": {
+          "type": "string"
+        },
+        "factorDeEscala": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "DuplicarDisenyoInput": {
+      "type": "object",
+      "required": ["idVersiones", "disenyo", "fecha"],
+      "properties": {
+        "idVersiones": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "disenyo": {
+          "$ref": "#/definitions/FEDisenosDTO"
+        },
+        "fecha": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        }
+      }
+    },
+    "FEDetalleDisenosCabDTO": {
+      "type": "object",
+      "required": ["sessionID", "lineas"],
+      "properties": {
+        "sessionID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lineas": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEDetalleDisenosLinDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEDetalleDisenosLinDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "FEDetalleDisenosLinDTO": {
+      "type": "object",
+      "required": ["ordenEntrada", "idUnidades", "x", "y", "z", "ancho", "fondo", "alto"],
+      "properties": {
+        "ordenEntrada": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "idUnidades": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "enlaces": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "FEDetalleDisenosLinDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/FEDetalleDisenosLinDTO"
+              }
+            ]
+          }
+        },
+        "x": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "y": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "z": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "ancho": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fondo": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "alto": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "mano": {
+          "$ref": "#/definitions/EMano"
+        }
+      }
+    },
+    "LoadIdiomaOutput": {
+      "type": "object",
+      "properties": {
+        "idioma": {
+          "$ref": "#/definitions/IdiomaDTO"
+        },
+        "textos": {
+          "$ref": "#/definitions/JsonObject"
+        }
+      }
+    },
+    "MenusDTO": {
+      "type": "object",
+      "properties": {
+        "claveMenu": {
+          "type": "string"
+        },
+        "anchoicono": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "altoicono": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "texto": {
+          "type": "string"
+        },
+        "submenus": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "MenusItemsDTO"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/MenusItemsDTO"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "MenusItemsDTO": {
+      "type": "object",
+      "required": ["orden"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "claveMenuItem": {
+          "type": "string"
+        },
+        "orden": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "texto": {
+          "type": "string"
+        },
+        "icono": {
+          "type": "string"
+        },
+        "clavemenuabrir": {
+          "type": "string"
+        },
+        "accion": {
+          "type": "string"
+        },
+        "descripcionES": {
+          "type": "string"
+        },
+        "descripcionUK": {
+          "type": "string"
+        },
+        "descripcionFR": {
+          "type": "string"
+        },
+        "descripcionIT": {
+          "type": "string"
+        },
+        "descripcionPT": {
+          "type": "string"
+        }
+      }
+    },
+    "GetMenuInput": {
+      "type": "object",
+      "properties": {
+        "clavemenu": {
+          "type": "string"
+        },
+        "filtro": {
+          "$ref": "#/definitions/FiltroMenu"
+        }
+      }
+    },
+    "FiltroMenu": {
+      "type": "object",
+      "properties": {
+        "texto": {
+          "type": "string"
+        }
+      }
+    },
+    "UpdatePreferenceInput": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "valor": {}
+      }
+    },
+    "GetGrupoTexturasInput": {
+      "type": "object",
+      "properties": {
+        "universal": {
+          "type": "boolean"
+        },
+        "catalogoName": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "identificador": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "idCatalogos": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "texto": {
+          "type": "string"
+        }
+      }
+    },
+    "GetTexturasInput": {
+      "type": "object",
+      "properties": {
+        "idGruposDeTexturas": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "texto": {
+          "type": "string"
+        }
+      }
+    },
+    "GetFEUnidadInput": {
+      "type": "object",
+      "properties": {
+        "codigo": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "GetFEInfoPuertaVentanaOutput": {
+      "type": "object",
+      "properties": {
+        "manos": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "ETiposPuertasVentanas"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/ETiposPuertasVentanas"
+              }
+            ]
+          }
+        },
+        "bisagras": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "ETiposPuertasVentanas"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/ETiposPuertasVentanas"
+              }
+            ]
+          }
+        },
+        "combinaciones": {
+          "type": "array",
+          "xml": {
+            "wrapped": true
+          },
+          "items": {
+            "xml": {
+              "name": "Combinacion"
+            },
+            "allOf": [
+              {
+                "$ref": "#/definitions/Combinacion"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ETiposPuertasVentanas": {
+      "type": "string",
+      "description": "",
+      "x-enumFlags": true,
+      "x-enumNames": [
+        "None",
+        "Interior",
+        "Exterior",
+        "BitIntExt",
+        "Izquierda",
+        "Derecha",
+        "BitIzqDer",
+        "Corredera",
+        "Ventana",
+        "BitTipo"
+      ],
+      "enum": [
+        "None",
+        "Interior",
+        "Exterior",
+        "BitIntExt",
+        "Izquierda",
+        "Derecha",
+        "BitIzqDer",
+        "Corredera",
+        "Ventana",
+        "BitTipo"
+      ]
+    },
+    "Combinacion": {
+      "type": "object",
+      "properties": {
+        "mano": {
+          "$ref": "#/definitions/ETiposPuertasVentanas"
+        },
+        "bisagra": {
+          "$ref": "#/definitions/ETiposPuertasVentanas"
+        },
+        "idUnidades": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "MyNinjaAuth Token": {
+      "type": "apiKey",
+      "description": "Copy this into the value field: Ninpo {token}",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "MyNinjaAuth Token": []
+    }
+  ]
+}

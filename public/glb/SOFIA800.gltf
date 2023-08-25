@@ -1,0 +1,229 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.8.19",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene Section-1",
+      "nodes": [0, 1]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "SOFIA 800.001",
+      "rotation": [0.7071068286895752, 0, 0, 0.7071067094802856],
+      "scale": [0.0010000000474974513, 0.0010000000474974513, 0.0010000000474974513]
+    },
+    {
+      "mesh": 1,
+      "name": "grifo2.001",
+      "scale": [0.0010000000474974513, 0.0008475633221678436, 0.0010506542166694999],
+      "translation": [0.4000000059604645, 0.1120000034570694, 0.08383384346961975]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "MineralMarmo",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Cromado.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.5764709711074829, 0.5764709711074829, 0.5764709711074829, 1],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.021425697952508926
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "extras": {
+        "targetNames": ["Ancho derecha", "Ancho izquierda"]
+      },
+      "name": "SOFIA 800.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "targets": [
+            {
+              "POSITION": 4,
+              "NORMAL": 5
+            },
+            {
+              "POSITION": 6,
+              "NORMAL": 7
+            }
+          ]
+        }
+      ],
+      "weights": [0, 0]
+    },
+    {
+      "name": "grifo2.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9
+          },
+          "indices": 10,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 6121,
+      "max": [800.0344848632812, 460, 128.5],
+      "min": [-0.00006103515625, 0, -14.5],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 6121,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 6121,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 17088,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 6121,
+      "max": [800.0347290039062, 0, 0],
+      "min": [0, 0, 0],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 6121,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 6121,
+      "max": [0, 0, 0],
+      "min": [-799.6182861328125, 0, 0],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 6121,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 5473,
+      "max": [23.005870819091797, 44.81219482421875, 63.688499450683594],
+      "min": [-22.994129180908203, -117.18780517578125, -48.311500549316406],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 5473,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5123,
+      "count": 28752,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 73452
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48968,
+      "byteOffset": 146904
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34176,
+      "byteOffset": 195872
+    },
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 230048
+    },
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 303500
+    },
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 376952
+    },
+    {
+      "buffer": 0,
+      "byteLength": 73452,
+      "byteOffset": 450404
+    },
+    {
+      "buffer": 0,
+      "byteLength": 65676,
+      "byteOffset": 523856
+    },
+    {
+      "buffer": 0,
+      "byteLength": 65676,
+      "byteOffset": 589532
+    },
+    {
+      "buffer": 0,
+      "byteLength": 57504,
+      "byteOffset": 655208
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "SOFIA800_data.bin",
+      "byteLength": 712712
+    }
+  ]
+}

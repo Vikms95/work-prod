@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Para debugging */
+
+/*[* {
+  outline: 1px solid green;
+}]*/
+
+/* Ajusta viewport */
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+:root {
+  --color1: '#FFFFFF'; /*blanco*/
+  --color2: '#3C476E'; /*azulclaro*/
+  --color3: '#6386A1'; /*azuloscuro*/
+  --color4: '#AAAAAA'; /*gris*/
+  --color5: '#a9afc1'; /*gris2*/
+  --color6: 'rgb(170, 170, 170)'; /*gris3*/
+  --color7: '#FF0000'; /*negro?*/
+  --urlBgIni: url('/assets/ambiente-live-matt-monterrey-blue-night-1000_l.png');
+}
+
+/* Quita las flechas de los inputs de tipo 'number' para Chrome y Mozilla */
+@layer base {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+    margin: 0;
+  }
+}
+
+/* Backdrop de los modales */
+.white-background {
+  z-index: 10;
+}
+
+.white-background:before {
+  content: '';
+  background-color: var(--color1);
+  width: 100vw;
+  height: 410vh;
+  z-index: -1;
+  opacity: 0.75;
+  inset: 0;
+  position: fixed;
+  margin-top: 50%;
+  margin-left: 50%;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Estilizado de scrollbars */
+/* TODO buscar como hacerlo en Mozilla */
+.scrollable::-webkit-scrollbar {
+  width: 0.2rem;
+  /* margin-top: 8rem; */
+  margin-bottom: 5rem;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: var(--color1);
+  border-radius: 10px;
+  outline: 1px solid var(--color4);
+  /* margin-top: 8rem; */
+  margin-bottom: 5rem;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: var(--color4);
+  border-radius: 10px;
+  /* margin-top: 8rem; */
+  margin-bottom: 5rem;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: var(--color1);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color4);
+  border-radius: 100vh;
+  border: 3px solid var(--color4);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color4);
+}
+
+.rainbow-gradient {
+  background: linear-gradient(
+    to left,
+    #ff021b,
+    #ed02dd,
+    #3100f5,
+    #00c8ff,
+    #04f741,
+    #f9fd00,
+    #ff021b
+  );
+}
+
+/* Scrollbars on ObjectEditor */
+.scrollable-editor::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scrollable-editor::-webkit-scrollbar-track {
+  background: var(--color1);
+  border-radius: 10px;
+  outline: 1px solid var(--color4);
+}
+
+.scrollable-editor::-webkit-scrollbar-thumb {
+  background: var(--color4);
+  border-radius: 10px;
+}

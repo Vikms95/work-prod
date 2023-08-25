@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmitOnError": false,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components": ["./components/export"],
+      "@components/*": ["./components/*"],
+      "~/helpers/*": ["./helpers/*"],
+      "@utils/*": ["./utils/*"],
+      "@proxies/*": ["./proxies/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@context/*": ["./context/*"],
+      "@catalog/*": ["./catalog/*"],
+      "@assets/*": ["./assets/*"],
+      "@constants": ["./constants.ts"],
+      "@store": ["./store/index.ts"],
+      "@classes": ["./classes/index.ts"],
+      "@types": ["./types.d.ts"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "types": ["vite/client"]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "dist/types/**/*.ts",
+    "next.config.js",
+    "next.config.js",
+    "components/viewer2d/angle.jsx",
+    "catalog/catalog.js",
+    "catalog/factories/area-factory-3d.js",
+    "catalog/**/*.jsx",
+    "utils/generalMaths/geometry.ts",
+    "utils/snap-scene.js",
+    "utils/graph-cycles.js",
+    "utils/graph-cycles.js",
+    "classes/index.js",
+    "classes/project.ts",
+    "classes/hole.ts",
+    "utils/graph.js",
+    "utils/graph-inner-cycles.js",
+    "utils/generalMaths/get-edges-of-subgraphs.js"
+  ],
+  "exclude": ["node_modules"]
+}
